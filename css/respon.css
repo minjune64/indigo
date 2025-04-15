@@ -1,0 +1,561 @@
+
+html{scroll-behavior: smooth;}
+
+
+
+/* 모바일용 */
+/* 기본 */
+.container{
+   width: 90%;
+   max-width: 1132px;
+   margin: 0 auto;
+}
+
+
+.sec_tit{
+   font-size: 45px;
+   font-weight: 100;
+   color: #3F51B5;
+}
+
+/* 헤더영역 */
+
+.header{
+   /* display: flex;
+   justify-content: flex-end;
+   align-items: center; */
+   height: 82px;
+}
+
+.gnb li{
+   margin: 0 1.5rem;
+   text-transform: uppercase;
+   text-align:left;
+   margin: 10px;
+   border-bottom: 1px solid rgb(40, 42, 172);
+}
+.gnb li:last-child{
+   border-bottom: 0;
+   padding-bottom: 0;
+   margin-bottom: 0;
+}
+.gnb a{
+   color:#fff;
+   font-size: 17px;
+   display: block;
+   padding-bottom: 15px;
+}
+.logo{
+   margin-right: auto;
+   font-size: 30px;
+   margin-left: 4rem;
+   font-family: 'Noto',Sans-serif;
+}
+.header .gnb{
+   position: absolute;
+   top: 8%;
+   left: 0;
+   width: 100%;
+   background-color: #3F51B5;
+   display: none;
+}
+.header .gnb .active{
+   display: block;
+}
+.header .menu_toggle_btn{
+   float: right;
+   width: 20px;
+   margin-top: 4px;
+   cursor: pointer;
+}
+
+.header .menu_toggle_btn span{
+   display: block;
+   width: 100%;
+   height: 2px;
+   background-color: black;
+}
+
+.header .menu_toggle_btn span:nth-child(2){
+   margin: 5px 0;
+}
+/* 햄버거 메뉴 버튼 스타일 */
+.menu_toggle_btn {
+   display: block; /* 필요에 따라 inline-block 또는 flex로 변경 */
+   width: 30px;
+   height: 30px;
+   position: relative;
+   cursor: pointer;
+ }
+ 
+ .menu_toggle_btn span {
+   display: block;
+   position: absolute;
+   height: 4px;
+   width: 100%;
+   background-color: black; /* 또는 원하는 색상 */
+   border-radius: 2px;
+   opacity: 1;
+   left: 0;
+   transform: rotate(0deg);
+   transition: .25s ease-in-out;
+ }
+ 
+ .menu_toggle_btn span:nth-child(1) {
+   top: 0px;
+ }
+ 
+ .menu_toggle_btn span:nth-child(2), .menu_toggle_btn span:nth-child(3) {
+   top: 10px; /* 가운데 선의 위치 조정 */
+ }
+ 
+ .menu_toggle_btn span:nth-child(3) {
+   top: 20px;
+ }
+ 
+ /* 메뉴가 열렸을 때 햄버거 메뉴 아이콘 변경 */
+ .menu_toggle_btn.active span:nth-child(1) {
+   top: 10px;
+   transform: rotate(135deg);
+ }
+ 
+ .menu_toggle_btn.active span:nth-child(2) {
+   opacity: 0;
+   left: -60px;
+ }
+ 
+ .menu_toggle_btn.active span:nth-child(3) {
+   top: 10px;
+   transform: rotate(-135deg);
+ }
+ 
+ /* GNB (메뉴) 스타일 */
+ .header .gnb {
+   position: absolute;
+   top: 8%;
+   left: 0;
+   width: 100%;
+   background-color: #3F51B5;
+   display: none; /* 기본적으로 숨김 */
+ }
+ 
+ .header .gnb.active {
+   display: block; /* 메뉴가 활성화되면 표시 */
+ }
+/* slider */
+
+.slider img{
+   display: block;
+   width: 100%;
+   height: auto;
+   max-width: 100%;
+}
+
+/* display */
+
+.display_section{
+   text-align: center;
+   margin-top: 59px;
+}
+
+.display_section .sec_tit{
+   margin-bottom: 30px;
+}
+
+.display_section .desc{
+   font-family: 'Noto', serif;
+   line-height: 1.6;
+   text-align: center;
+   color: #616161;
+}
+
+
+/* promotion_section */
+
+.promotion_section{
+   margin-top: 109px;
+   text-align: center;
+}
+
+/* .promotion_section ul{
+   display:flex;
+   justify-content: space-between;
+} */
+.promotion_section .promo_list li img{
+   height: 52px;
+   margin-top: 50px;
+}
+
+.promotion_section .promo_list li h3{
+   margin:19px 0 19px 0 ;
+   color:#3F51B5;
+   font-size: 17px;
+}
+
+.promotion_section .promo_list li p{
+   color: #616161;
+   font-size: 13px;
+   font-family: 'Noto', serif;
+   line-height: 1.5;
+}
+
+/* work_section */
+
+.work_section{
+   margin-top: 73px;
+   text-align: center;
+}
+
+.work_section .sec_tit{
+   width: 90%;
+   max-width: 1132px;
+   margin: 0 auto;
+   margin-bottom: 47px;
+}
+
+.work_section .work_list li{
+   width: 100%;
+}
+
+.work_section .work_list li a{
+   display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.work_section .work_list li a::before{
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   width: 100%;
+   height: 100%;
+   content: '';
+   opacity: 0;
+   transition: all 0.2s;
+   background-color: #3F51B5;
+}
+.work_section .work_list li a:hover::before{
+   opacity: 0.86;
+}
+
+.work_section .work_list li .info{
+   position: absolute;
+   top: 0;
+   left: 23px;
+   z-index: 20;
+   opacity: 0;
+   transition: all 0.3s;
+}
+
+.work_section .work_list li a:hover .info{
+   transform: translateY(23px);
+   opacity: 1;
+}
+
+.work_section .work_list li .info h3{
+   color: #fff;
+   font-size: 23px;
+   margin-bottom: 10px;
+}
+.work_section .work_list li .info span{
+   font-size: 11px;
+   color: #fff;
+}
+
+.work_section .work_list li img{
+   display: block;
+   width: 100%;
+   height: auto;
+   max-width: 100%;
+}
+
+/* blog_section */
+
+.blog_section{
+   margin-top: 124px;
+   text-align: center;
+}
+
+.blog_section .sec_tit{
+   margin-bottom: 76px;
+   
+}
+
+.blog_section .blog_list li{
+   width: 100%;
+   /* margin-left: 2.6%; */
+}
+
+.blog_section .blog_list li img{
+   width: 100%;
+   margin-bottom: 10px;
+}
+.blog_section .blog_list li time{
+   color: #3F51B5;
+}
+.blog_section .blog_list li a h3{
+   margin-bottom: 40px;
+   margin-top: 15px;
+   color: #3F51B5;
+}
+
+/*contact_section  */
+
+.contact_section{
+   margin-top: 76px;
+   text-align: center;
+}
+
+.contact_section .sec_tit{
+   margin-bottom: 76px;
+}
+
+.contact_section .form_box .form, .contact_section .form_box .textArea{
+   width: 80%;
+   float: left;
+}
+.contact_section .form_box .form{
+   margin-right: 2.6%;
+   
+}
+.blind{
+   opacity: 0;
+}
+#name, #phone, #email{
+   height: 50px;
+}
+
+#message{
+   height: 180px;
+}
+
+.send_btn{
+   margin-top: 30px;
+   position: absolute;
+   right: 0;
+}
+
+.send_btn button{
+   background-color: #3F51B5;
+   color: #fff;
+   padding: 12px;
+}
+
+.form_box{
+   position: relative;
+}
+
+/* footer */
+.footer{
+   margin-top: 200px;
+}
+.footer iframe{
+   height: 432px;
+   width: 100%;
+}
+
+.copyright{
+   width: 100%;
+   height: 50px;
+   text-align: center;
+   padding-top: 25px;
+   font-family:'Noto', sans-serif ;
+   font-weight: 600;
+   color: #3F51B5;
+}
+
+
+/* 데스크탑 */
+@media all and (min-width:1132px){
+   .display_section{
+      margin-top: 150px;
+   }
+   .display_section .desc{
+      text-align: left;
+   }
+   .display_section .desc:before{
+      content: '';
+      background-color: #c9c9c9;
+      width: 4px;
+      height: 46px;
+      display: block;
+      position: absolute;
+      left:48%;
+   }
+   .display_section .container{
+      display: flex;
+      justify-content: space-between;
+}
+   .promotion_section ul{
+   display:flex;
+   justify-content: space-between;
+}
+   .work_section .sec_tit{
+      margin-top: 279px;
+      }
+   .work_section .work_list{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      }
+
+   .menu_toggle_btn{
+      display: none;
+   }
+
+   .header .gnb{
+      display:inline-block;
+      background:none;
+      width: 600px;
+      margin-left: 75%;
+      position: fixed;
+      top: 25px;
+      
+   }
+   .header .gnb li{
+      display: inline-block;
+   }
+   .header{
+     width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+   }
+   .gnb li{
+      /* float: right; */
+      border-bottom: 0;
+      /* text-align: right; */
+   }
+
+   .gnb a{
+      color: #3F51B5;
+   }
+   .blog_section{
+      margin-top: 280px;
+      display: flex;
+      padding-top: 100px;
+   }
+   .blog_section .sec_tit{
+      margin-right: 200px;
+   }
+   .blog_section .container{
+      display: flex;
+   }
+   .blog_section .blog_list{
+      display: flex;
+      justify-content: flex-end;
+   }
+   .blog_section .blog_list li{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+      margin-right: 20px;
+   }
+   .blog_section .blog_list li img{
+      width: 100%;
+      
+   }
+   /* contact_section */
+
+   .contact_section{
+      width: 100%;
+   }
+   .contact_section .container{
+      display: flex;
+   }
+   legend{
+      display: none;
+   }
+   .contact_section .form_box fieldset{
+      display: flex;
+   }
+   .contact_section .form_box .form, .contact_section .form_box .textArea{
+      width: 50%;
+   }
+   .contact_section .sec_tit{
+      margin-right: 120px;
+   }
+   .contact_section .form_box .form{
+      margin-right: 60px;
+   }
+
+/* footer */
+
+.copyright{
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
